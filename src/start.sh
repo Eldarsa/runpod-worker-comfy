@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 
-if [ -f "/workspace/ComfyUI/venv/bin/activate" ]; then
+if [ -f "/runpod-volume/ComfyUI/venv/bin/activate" ]; then
     echo "Starting WebUI API"
-    source /workspace/ComfyUI/venv/bin/activate
+    source /runpod-volume/ComfyUI/venv/bin/activate
 else
-    echo "ERROR: The Python Virtual Environment (/workspace/venv/bin/activate) could not be activated"
+    echo "ERROR: The Python Virtual Environment (/runpod-volume/ComfyUI/venv/bin/activate) could not be activated"
 fi
 
 # Use libtcmalloc for better memory management
