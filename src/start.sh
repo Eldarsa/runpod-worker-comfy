@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 
-if [ -f "/workspace/venv/bin/activate" ]; then
+if [ -f "/workspace/ComfyUI/venv/bin/activate" ]; then
     echo "Starting WebUI API"
-    source /workspace/venv/bin/activate
+    source /workspace/ComfyUI/venv/bin/activate
 else
     echo "ERROR: The Python Virtual Environment (/workspace/venv/bin/activate) could not be activated"
 fi
