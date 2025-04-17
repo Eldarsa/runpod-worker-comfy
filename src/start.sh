@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 
+
+if [ -f "/workspace/venv/bin/activate" ]; then
+    echo "Starting WebUI API"
+    source /workspace/venv/bin/activate
+else
+    echo "ERROR: The Python Virtual Environment (/workspace/venv/bin/activate) could not be activated"
+fi
+
 # Use libtcmalloc for better memory management
 TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
 export LD_PRELOAD="${TCMALLOC}"
+
+
 
 # Serve the API and don't shutdown the container
 if [ "$SERVE_API_LOCALLY" == "true" ]; then
